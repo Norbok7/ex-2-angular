@@ -7,16 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent {
-title: string = 'Basketball'
+title: any = 'Basketball'
 content: string = 'Michael Jordan is the best!'
 isTechRelated: boolean = true;
 
 
 changeColor(){
-    return this.title === 'true' ? 'blue' : 'yellow';
+    return true !== this.isTechRelated ? 'blue' : 'yellow';
   }
-// setTimeout(() => {
-//   title = true;
-// }, 2000);
+clickToTrue(){
+  return this.isTechRelated = false;
 }
 
+}
